@@ -23,7 +23,7 @@ interface Marker {
 
 @Component({
   selector: 'app-markers-page',
-  imports: [JsonPipe],
+  imports: [],
   templateUrl: './markers-page.component.html',
 })
 export class MarkersPageComponent implements AfterViewInit {
@@ -43,10 +43,6 @@ export class MarkersPageComponent implements AfterViewInit {
       center: [-117.27335, 32.84986], // starting position [lng, lat]
       zoom: 11, // starting zoom
     });
-
-    // const marker = new mapboxgl.Marker({ draggable: true })
-    //   .setLngLat([-117.27335, 32.84986])
-    //   .addTo(map);
 
     this.mapListeners(map);
   }
