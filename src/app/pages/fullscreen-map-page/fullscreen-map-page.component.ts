@@ -76,7 +76,8 @@ export class FullscreenMapPageComponent implements AfterViewInit {
       const center = map.getCenter();
       this.coordinates.set(center);
     });
-
+    map.addControl(new mapboxgl.FullscreenControl()); //boton en el mapa para que se vea en toda la pantalla
+    map.addControl(new mapboxgl.NavigationControl()); //botones para controlar el mapa como brujula, mas o menos
     this.map.set(map);
   }
 }
