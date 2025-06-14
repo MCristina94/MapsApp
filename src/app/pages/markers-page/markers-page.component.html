@@ -8,6 +8,7 @@
     <div
       class="from-control"
       (click)="flyToMarker(marker.mapboxMarker.getLngLat())"
+      (dblclick)="deleteMarker(marker)"
     >
       <label class="label cursor-pointer">
         <span
